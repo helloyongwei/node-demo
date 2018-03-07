@@ -20,15 +20,15 @@ var server = http.createServer(function(request, response){
   /******** 从这里开始看，上面不要看 ************/
 
   console.log('HTTP 路径为\n' + path)
-  if(path == '/style.js'){
+  if(path == '/style.css'){
     response.setHeader('Content-Type', 'text/css; charset=utf-8')
     response.write('body{background-color: #ddd;}h1{color: red;}')
     response.end()
-  }else if(path == '/script.html'){
+  }else if(path == '/script.js'){
     response.setHeader('Content-Type', 'text/javascript; charset=utf-8')
     response.write('alert("这是JS执行的")')
     response.end()
-  }else if(path == '/index.css'){
+  }else if(path == '/index.html'){
     response.setHeader('Content-Type', 'text/html; charset=utf-8')
     response.write('<!DOCTYPE>\n<html>'  + 
       '<head><link rel="stylesheet" href="/style.js">' +
